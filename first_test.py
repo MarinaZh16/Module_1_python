@@ -8,8 +8,7 @@ def spam(number):
     повторяется столько раз, сколько параметров передано. Она уже написана,
     но не работает. Любым способом заставьте ее работать.
     '''
-    s=['bulochka'*number]
-    return s[0]
+    return 'bulochka'*number
 
 
 def my_sum(list_of_numbers):
@@ -23,8 +22,8 @@ def my_sum(list_of_numbers):
     
     """
     s=0
-    for i in range(len(list_of_numbers)):
-        s+=list_of_numbers[i]
+    for i in list_of_numbers:
+        s+=i
     return s
     
 
@@ -48,10 +47,9 @@ def shortener(string):
     s=string.split(' ')
     b=[]
     for i in s:
-        if len(i)>6:
-            b.append(i[0:6]+'*')
-        else:
-            b.append(i)
+        if len(i) > 6:
+            i=(i[0:6]+'*')
+        b.append(i)
     new_string=' '.join(b)
     return  new_string
 
